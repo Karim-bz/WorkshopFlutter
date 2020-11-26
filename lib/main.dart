@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:myfirstapp/wonder.dart';
 
 import 'mycard.dart';
 
 void main() {
-  runApp(MyCard());
+  runApp(WonderWorld());
 }
 
 class MyProfile extends StatelessWidget {
