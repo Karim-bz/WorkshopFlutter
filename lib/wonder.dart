@@ -2,6 +2,8 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
+import 'mycard.dart';
+
 class WonderWorld extends StatefulWidget {
   WonderWorld({Key key}) : super(key: key);
 
@@ -28,7 +30,20 @@ class _WonderWorldState extends State<WonderWorld> {
         body: SafeArea(
           child: Container(
             padding: const EdgeInsets.all(20),
-            child: Image.asset("images/$image"),
+            child: Column(
+              children: [
+                Image.asset("images/$image"),
+                ElevatedButton(
+                  child: Text('Open route'),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => MyCard()),
+                    );
+                  },
+                ),
+              ],
+            ),
           ),
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
