@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
+import 'mycard.dart';
+
 void main() {
-  runApp(MyProfile());
+  runApp(MyCard());
 }
 
 class MyProfile extends StatelessWidget {
@@ -11,7 +13,9 @@ class MyProfile extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        body: SafeArea(child: columns()),
+        body: SafeArea(
+          child: columns(),
+        ),
       ),
     );
   }
